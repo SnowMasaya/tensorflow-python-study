@@ -71,8 +71,8 @@ TAG=$(shell echo $$CIRCLE_SHA1 | cut -c 1-7)
 # Define linked containers (these name should match keys in
 # fig.ml). The test & test-ci targets wil be run with all links set
 # correctly.
-DOCKER_RUN_TENSORFLOW:=docker run --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro -p 8888:8888 -it $(REPO_NAME)/tensorflow-python-gpu bash
-DOCKER_RUN_TENSORFLOW_GPU:=docker run --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro -p 8888:8888 -it $(REPO_NAME)/tensorflow-python-gpu bash
+DOCKER_RUN_TENSORFLOW:=docker run --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro -p 6006:6006 -p 8888:8888 -it $(REPO_NAME)/tensorflow-python-cpu
+DOCKER_RUN_TENSORFLOW_GPU:=docker run --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro -p 6006:6006 -p 8888:8888 -it $(REPO_NAME)/tensorflow-python-gpu bash
 
 # Wildcard rule to build an image from a file inside dockerfiles/
 # Use the tasks like any other dependency. Order may be controller
