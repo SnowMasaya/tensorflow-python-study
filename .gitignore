@@ -98,3 +98,5 @@ Data/
 Data/*
 disk.vdi
 *.pkl
+*.pb
+cifar-10-batches-bin/*
