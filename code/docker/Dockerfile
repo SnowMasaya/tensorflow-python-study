@@ -1,1 +1,1 @@
-dockerfiles/tensorflow-python-cpu
+dockerfiles/tensorflow-python-gpu
