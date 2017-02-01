@@ -74,6 +74,7 @@ COPY python /notebooks
 # We just add a little wrapper script.
 COPY shell/run_jupyter.sh /notebooks/
 COPY data /notebooks/data
+RUN mkdir /notebooks/graph_dir
 
 # TensorBoard
 EXPOSE 6006
